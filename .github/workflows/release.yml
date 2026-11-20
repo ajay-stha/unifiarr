@@ -28,6 +28,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with: { name: unifiarr-apk, path: unifiarr.apk }
       - if: startsWith(github.ref, 'refs/tags/')
-        run: gh release create "$GITHUB_REF_NAME" unifiarr.apk --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" unifiarr.apk --notes-file CHANGELOG.md
         env:
           GH_TOKEN: ${{ github.token }}

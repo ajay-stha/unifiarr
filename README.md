@@ -29,3 +29,8 @@ node --test
 ```
 
 `android/` holds the Android wrapper app.
+
+## Releases
+
+Update `CHANGELOG.md` before pushing a `v*` tag. The release workflow builds the
+APK, attaches it to a GitHub Release and uses `CHANGELOG.md` as its description.
