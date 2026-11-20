@@ -33,4 +33,13 @@ node --test
 ## Releases
 
 Update `CHANGELOG.md` before pushing a `v*` tag. The release workflow builds the
-APK, attaches it to a GitHub Release and uses `CHANGELOG.md` as its description.
+APK and Play Store AAB, attaches both to a GitHub Release and uses `CHANGELOG.md`
+as its description. Manual runs upload both as workflow artifacts.
+
+Configure repository Actions secrets `KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`,
+`KEY_ALIAS` and `KEY_PASSWORD` with your release/upload keystore credentials.
+For an existing Play Store app, use its registered upload key.
+
+Upload `unifiarr.aab` to Google Play Console; the workflow does not publish to
+Google Play automatically. Increase `versionCode` in
+`android/app/build.gradle.kts` for each Play Store update.

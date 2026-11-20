@@ -12,8 +12,8 @@ android {
         applicationId = "aj.unifiarr.app"
         minSdk = 26
         targetSdk = 36
-        versionCode = 3
-        versionName = "1.0"
+        versionCode = 4
+        versionName = "1.0.0"
     }
     // Local: android/keystore.properties; CI: KEYSTORE_FILE/KEYSTORE_PASSWORD/KEY_ALIAS/KEY_PASSWORD env vars.
     val ks = Properties()
