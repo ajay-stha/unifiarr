@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.Unifiarr" parent="android:Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:colorAccent">#E97750</item>
+    </style>
+</resources>

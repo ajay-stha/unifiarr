@@ -1,0 +1,5 @@
+.unifiarr.json
+data
+*.test.mjs
+node_modules
+android

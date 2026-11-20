@@ -1,0 +1,5 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:shortcutId="server" android:icon="@mipmap/ic_launcher" android:shortcutShortLabel="@string/change_server">
+        <intent android:action="aj.unifiarr.app.SERVER" android:targetPackage="aj.unifiarr.app" android:targetClass="aj.unifiarr.app.MainActivity" />
+    </shortcut>
+</shortcuts>

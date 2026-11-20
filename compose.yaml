@@ -1,0 +1,16 @@
+services:
+  unifiarr:
+    build: .
+    image: unifiarr
+    container_name: unifiarr
+    restart: unless-stopped
+    network_mode: host
+    # ports:
+    #   - "4180:4180"
+    environment:
+      # Hostnames/IPs you open Unifiarr with, besides localhost (e.g. 192.168.1.10,media.home).
+      ALLOWED_HOSTS: "192.168.18.190,ajay"
+    volumes:
+      - ./data:/data
+    # Inside the container "localhost" is the container itself: point services at your host's IP
+    # (e.g. http://192.168.1.10:8096) or their container names on a shared network.

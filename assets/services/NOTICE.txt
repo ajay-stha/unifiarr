@@ -1,0 +1,30 @@
+SERVICE LOGO ATTRIBUTION
+
+These unmodified logos identify third-party services. All trademarks belong
+to their respective owners; their inclusion does not imply endorsement.
+Images are displayed at smaller sizes without recoloring or cropping.
+
+Jellyfin - Jellyfin contributors
+Source: https://github.com/jellyfin/jellyfin-ux/blob/69a2b7b1237732a134dd501ff55b9404cf2d1601/branding/SVG/icon-transparent.svg
+License: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Full license: jellyfin.LICENSE.txt
+
+Sonarr - Sonarr contributors
+Source: https://github.com/Sonarr/Sonarr/blob/51a2412af235197ce15d7d4a17c053a8e2c26609/Logo/128.png
+License: GNU GPL version 3 (see sonarr.LICENSE.txt)
+Copyright notices: sonarr.COPYRIGHT.txt
+
+Radarr - Radarr contributors
+Source: https://github.com/Radarr/Radarr/blob/c482b3262e2aeedbd11d5491310060193ecd8967/Logo/128.png
+License: GNU GPL version 3 (see radarr.LICENSE.txt)
+
+Seerr - Seerr contributors, copyright (c) 2020 sct
+Source: https://github.com/seerr-team/seerr/blob/3a907c26e0121974cbb8ee0250e7e9d68d717029/public/android-chrome-192x192.png
+License: MIT (see seerr.LICENSE.txt)
+
+qBittorrent - qBittorrent contributors
+Source: https://github.com/qbittorrent/qBittorrent/blob/d9aae7f7a4f696274e03c735e2c5869da1ea0bf7/src/icons/qbittorrent-tray.svg
+Upstream licensing notice: qbittorrent.COPYING.txt
+GPLv3+ assets: see qbittorrent.GPLv3.txt
+Upstream authors: qbittorrent.AUTHORS.txt

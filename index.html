@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Unifiarr brings your media services, requests, downloads, and library together.">
+  <title>Unifiarr — Your media, together.</title>
+  <link rel="icon" href="assets/unifiarr.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/unifiarr.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>if (localStorage.theme === 'dark') document.documentElement.classList.add('dark'); if (localStorage.sidebar === 'collapsed') document.documentElement.classList.add('collapsed')</script>
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <dialog class="sidebar" id="sidebar" open tabindex="-1" autofocus aria-label="Workspace navigation">
+    <div class="sidebar-brand"><a class="brand" href="#overview" aria-label="Unifiarr home"><img class="brand-mark" src="assets/unifiarr.svg" alt="" width="36" height="36">unifiarr<span class="brand-dot">.</span></a><button class="icon-button mobile-only" id="menu-close" aria-label="Close navigation">×</button></div>
+    <div class="workspace"><span class="workspace-icon">H</span><div><strong>Home server</strong><small>Personal workspace</small></div><span class="demo-pill">Setup</span></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav id="navigation" aria-label="Main navigation"></nav>
+    <p class="nav-caption services-caption">YOUR SERVICES <span>0</span></p>
+    <nav id="service-navigation" aria-label="Service connections"></nav>
+    <div class="sidebar-bottom">
+      <div class="server-health"><span class="status-dot"></span><div>Connecting…<small>Checking your services</small></div></div>
+      <button class="profile" data-view="connections"><span>Settings<small>Services &amp; connections</small></span><span id="profile-settings"></span></button>
+    </div>
+  </dialog>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button" id="menu-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"></button>
+      <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb">Overview</strong></div>
+      <label class="search-wrap"><span id="search-icon"></span><input class="search" id="search" type="search" placeholder="Search movies and shows…" aria-label="Search movies and shows"><kbd>/</kbd></label>
+      <div class="topbar-actions"><button class="icon-button" id="theme-toggle" aria-label="Switch to dark theme"></button><button class="icon-button" data-action="activity" aria-label="View activity" id="activity-toggle"></button></div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <nav class="tabbar" id="tabbar" aria-label="Quick navigation"></nav>
+    <footer><span>A little less switching. A lot more watching.</span><span><a href="assets/services/NOTICE.txt">Service logo credits</a> · Unifiarr <span class="muted">· v0.1</span></span></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
