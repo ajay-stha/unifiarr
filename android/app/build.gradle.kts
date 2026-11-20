@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application") version "9.5.0"
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.10"
@@ -13,8 +15,19 @@ android {
         versionCode = 3
         versionName = "1.0"
     }
-    // ponytail: release signed with the local debug key for sideloading; add a real keystore before publishing.
-    buildTypes { release { isMinifyEnabled = true; isShrinkResources = true; signingConfig = signingConfigs.getByName("debug"); proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt")) } }
+    // Local: android/keystore.properties; CI: KEYSTORE_FILE/KEYSTORE_PASSWORD/KEY_ALIAS/KEY_PASSWORD env vars.
+    val ks = Properties()
+    rootProject.file("keystore.properties").takeIf { it.exists() }?.reader()?.use { ks.load(it) }
+    fun cfg(prop: String, env: String) = ks.getProperty(prop) ?: System.getenv(env)
+    signingConfigs {
+        create("release") {
+            cfg("storeFile", "KEYSTORE_FILE")?.let { storeFile = rootProject.file(it) }
+            storePassword = cfg("storePassword", "KEYSTORE_PASSWORD")
+            keyAlias = cfg("keyAlias", "KEY_ALIAS")
+            keyPassword = cfg("keyPassword", "KEY_PASSWORD")
+        }
+    }
+    buildTypes { release { isMinifyEnabled = true; isShrinkResources = true; signingConfig = signingConfigs.getByName("release"); proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt")) } }
     buildFeatures { compose = true }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
